@@ -16,6 +16,7 @@ class UserAgent {
 
 class UserData {
     constructor() {
+        this.id = 0,
         this.user_agent = new UserAgent,
 
         this.ip = "",
@@ -62,31 +63,31 @@ function get_user_agent() {
     console.log(parsed_user_agent)
     let user_agent = new UserAgent;
 
-    if (parsed_user_agent.browser != undefined) {
+    if (parsed_user_agent.browser.name != undefined) {
         user_agent.browser_name = parsed_user_agent.browser.name
     }
 
-    if (parsed_user_agent.browser != undefined) {
+    if (parsed_user_agent.browser.version != undefined) {
         user_agent.browser_version = parsed_user_agent.browser.version
     }
 
-    if (parsed_user_agent.os != undefined) {
+    if (parsed_user_agent.os.name != undefined) {
         user_agent.os_name = parsed_user_agent.os.name
     }
     
-    if(parsed_user_agent.os != undefined) {
+    if(parsed_user_agent.os.version != undefined) {
         user_agent.os_version = parsed_user_agent.os.version
     }
 
-    if(parsed_user_agent.device != undefined) {
+    if(parsed_user_agent.device.model != undefined) {
         user_agent.device_model = parsed_user_agent.device.model
     }
 
-    if(parsed_user_agent.device != undefined) {
+    if(parsed_user_agent.device.type != undefined) {
         user_agent.device_type = parsed_user_agent.device.type
     }
 
-    if(parsed_user_agent.device != undefined) {
+    if(parsed_user_agent.device.vendor != undefined) {
         user_agent.device_vendor = parsed_user_agent.device.vendor
     }
 
